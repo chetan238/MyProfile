@@ -1,0 +1,44 @@
+h2{
+    font-size: 32px;
+}
+
+.block{
+    background-color: #E0E0E1;
+}
+
+.span4 img {
+    margin-right: 10px;
+}
+.span4 .img-left {
+    float: left;
+}
+
+.paragraph {
+    padding: 8px 16px;
+}
+.img-left{
+    width:300px;
+    height:300px;
+    padding:8px 16px;
+    
+}
+.row{
+    padding: 8px 16px;
+    font-size: 16px;
+}
+
+.content-heading {
+    padding: 8px 16px;
+}
+
+.hr1{
+    width: 100%;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .download-button {
+        margin-left: 100px;
+    }
+
+}

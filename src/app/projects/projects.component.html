@@ -1,0 +1,10 @@
+<h2>Projects</h2>
+<div class="projects-details">
+  
+  <div class="v1" *ngFor="let github of githubList">
+    <h3 style="padding:8px; ">{{github.name}}</h3>
+    <p style="padding:8px;">{{github.description}}</p>
+    <a style="padding:8px;" class="btn btn-primary" href="{{github.html_url}}" role="button" target="_blank">View On Github</a>
+    <hr>
+  </div>
+</div>
