@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { GithubapisService } from '../service/data/githubapis.service';
 import { HttpClient } from '@angular/common/http';
 
-declare var require: any
-const FileSaver = require('file-saver')
+// declare var require: any
+// const FileSaver = require('file-saver')
 
 @Component({
   selector: 'app-introduction',
@@ -26,13 +26,13 @@ export class IntroductionComponent implements OnInit {
     this.retrieveGithubBio("mohitmanglani2906")
   }
 
-  downloadPdf(){
-    console.log("DownLoad method Called")
-    const pdfUrl = './assets/resume/resume.pdf';
-    const pdfName =  'Mohit Manglani'
-    console.log(pdfUrl)
-    FileSaver.saveAs(pdfUrl, pdfName)
-  }
+  // downloadPdf(){
+  //   console.log("DownLoad method Called")
+  //   const pdfUrl = './assets/resume/resume.pdf';
+  //   const pdfName =  'Mohit Manglani'
+  //   console.log(pdfUrl)
+  //   FileSaver.saveAs(pdfUrl, pdfName)
+  // }
 
   retrieveGithubBio(username){
     this.githubapisService.retrieveGithubBio(username).subscribe(
