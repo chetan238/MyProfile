@@ -1,3 +1,4 @@
+import { AdsenseModule } from 'ng2-adsense';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -19,7 +20,8 @@ import { IntroductionComponent } from './introduction/introduction.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    AdsenseModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
