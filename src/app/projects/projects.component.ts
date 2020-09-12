@@ -45,7 +45,7 @@ export class ProjectsComponent implements OnInit {
       },
       error => {
         this.errorMessage = "Please Refresh!"
-        console.log(error)
+        //console.log(error)
       }
       
     )
@@ -53,7 +53,7 @@ export class ProjectsComponent implements OnInit {
 
   getOutPutProjects(projectsList){
 
-    console.log(projectsList.length)
+    //console.log(projectsList.length)
     
     for(var i=0 ;i< projectsList.length; i++){
       this.name = projectsList[i]["name"]
@@ -64,9 +64,9 @@ export class ProjectsComponent implements OnInit {
           this.description = "Description Not Available!"
       }
 
-      console.log(this.name)
-      console.log(this.description)
-      console.log(this.html_url)
+      // console.log(this.name)
+      // console.log(this.description)
+      // console.log(this.html_url)
 
       this.githubList.push(new GitHub(this.name, this.description, this.html_url))
 
@@ -92,7 +92,7 @@ export class ProjectsComponent implements OnInit {
       
     }
 
-    console.log(this.githubList)
+    //console.log(this.githubList)
 
 
 

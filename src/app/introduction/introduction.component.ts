@@ -27,10 +27,10 @@ export class IntroductionComponent implements OnInit {
   }
 
   downloadPdf(){
-    console.log("DownLoad method Called")
+    //console.log("DownLoad method Called")
     const pdfUrl = './assets/resume/resume.pdf';
     const pdfName =  'Mohit Manglani'
-    console.log(pdfUrl)
+    //console.log(pdfUrl)
     FileSaver.saveAs(pdfUrl, pdfName)
   }
 
@@ -45,7 +45,7 @@ export class IntroductionComponent implements OnInit {
         },
         error =>{
           this.errorMessage = "Please Refresh!"
-          console.log(error)
+          //console.log(error)
         }
 
     )
