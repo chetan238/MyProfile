@@ -8,13 +8,15 @@ import { ProjectsComponent } from './projects/projects.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SkillsComponent } from './skills/skills.component';
 import { IntroductionComponent } from './introduction/introduction.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProjectsComponent,
     SkillsComponent,
-    IntroductionComponent
+    IntroductionComponent,
+    FooterComponent
     
   ],
   imports: [
