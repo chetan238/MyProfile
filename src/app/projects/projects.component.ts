@@ -24,6 +24,7 @@ export class ProjectsComponent implements OnInit {
   description : string
   html_url : string
   githubList = []
+  
   constructor(
     private githubapisService: GithubapisService
     
@@ -54,7 +55,8 @@ export class ProjectsComponent implements OnInit {
   getOutPutProjects(projectsList){
 
     //console.log(projectsList.length)
-    
+    const notIncludeProject = ["Android-Samples","NPTEl-material-for-programming-data-structure-and-algoritham","OOPC-programmes-for-beginners",
+                                "scf-config-repository", "TeluskoLiveProject","Women_Security"]
     for(var i=0 ;i< projectsList.length; i++){
       this.name = projectsList[i]["name"]
       this.description = projectsList[i]["description"]
@@ -68,27 +70,30 @@ export class ProjectsComponent implements OnInit {
       // console.log(this.description)
       // console.log(this.html_url)
 
-      this.githubList.push(new GitHub(this.name, this.description, this.html_url))
+      //this.githubList.push(new GitHub(this.name, this.description, this.html_url))
 
+      
       // if (this.name != "Android-Samples" || this.name != "NPTEl-material-for-programming-data-structure-and-algoritham" ||
       //     this.name != "OOPC-programmes-for-beginners" || this.name != "scf-config-repository" || this.name != "TeluskoLiveProject"
       //     || this.name != "Women_Security")
-      // {
 
-      //   this.description = projectsList[i]["description"]
-      //   this.html_url = projectsList[i]["html_url"]
-      //   console.log(this.name)
-      //   console.log(this.description)
-      //   console.log(this.html_url)
+      if(!notIncludeProject.includes(this.name))
+      {
+
+        this.description = projectsList[i]["description"]
+        this.html_url = projectsList[i]["html_url"]
+        console.log(this.name)
+        console.log(this.description)
+        console.log(this.html_url)
         
-      //   if (projectsList[i]["description"] == null){
-      //     this.description = "Not Available!"
-      //   }
+        if (projectsList[i]["description"] == null){
+          this.description = "Description Not Available,Will Update Soon!"
+        }
         
-      //   //this.githubList.push(new GitHub(this.name, this.description, this.html_url))
+        this.githubList.push(new GitHub(this.name, this.description, this.html_url))
 
 
-      // }
+      }
       
     }
 
