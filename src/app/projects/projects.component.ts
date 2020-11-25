@@ -56,7 +56,7 @@ export class ProjectsComponent implements OnInit {
 
     //console.log(projectsList.length)
     const notIncludeProject = ["Android-Samples","NPTEl-material-for-programming-data-structure-and-algoritham","OOPC-programmes-for-beginners",
-                                "scf-config-repository", "TeluskoLiveProject","Women_Security"]
+                                "scf-config-repository", "TeluskoLiveProject","Women_Security","Project","Code"]
     for(var i=0 ;i< projectsList.length; i++){
       this.name = projectsList[i]["name"]
       this.description = projectsList[i]["description"]
