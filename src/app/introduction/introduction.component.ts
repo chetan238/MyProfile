@@ -23,13 +23,13 @@ export class IntroductionComponent implements OnInit {
 
   ngOnInit() {
     this.introDetails.imageUrl = ""
-    this.retrieveGithubBio("mohitmanglani2906")
+    this.retrieveGithubBio("chetan238")
   }
 
   downloadPdf(){
     //console.log("DownLoad method Called")
-    const pdfUrl = './assets/resume/resume.pdf';
-    const pdfName =  'Mohit Manglani'
+    const pdfUrl = './assets/resume/chaitanya_kagda-java_developer.pdf.pdf';
+    const pdfName =  'Chetan Kagda'
     //console.log(pdfUrl)
     FileSaver.saveAs(pdfUrl, pdfName)
   }

@@ -1,22 +1,35 @@
 <ng-adsense [adClient]="'ca-pub-4456921083443102'" [pageLevelAds]="true"></ng-adsense>
-
-
-  <div class="row">
-		<h2>Mohit Manglani</h2>
-	</div>
-	
 	<div class="block">
       <div class="row">
         <div class="span4">
-          <img class="img-left img-circle" src="https://avatars1.githubusercontent.com/u/38598962?v=4">
-          <div class="content-heading"><h3>About</h3></div>
-          <p class="paragraph">{{introDetails.introduction}}</p>
-          <button class="btn btn-info download-button" (click) = "downloadPdf()" style="padding: 10px;"> 
-            <i class="fa fa-download"></i> Download Resume
-          </button>
         </div>
      </div>
      
+  </div>
+  <div class="container">
+  <div class="card">
+    <div class="front">
+      <img class="img-left img-circle" src="https://avatars.githubusercontent.com/u/65077911?s=400&u=1e86a1ebee75c26c6f77f382bd395f731f997fcf&v=4">
+    </div>
+    <div>
+    <br><br><br>
+          <h1 style="color:black">Chetan Kagda<span>Software Engineer</span></h1>
+
+    </div>
+
+    <div class="back">
+      <h2>About</h2><span><br><b><p class="paragraph" style="padding: 10px;">{{introDetails.introduction}}</p></b></span>
+     
+      <ul>
+    
+        <li><button class="btn btn-info download-button" (click) = "downloadPdf()" style="padding: 10px;"> 
+        <i class="fa fa-download"></i> Download Resume
+          </button></li>
+        
+        </ul>
+      
+    </div>
+    </div>
   </div>
 
   <hr class="hr1"><br> 

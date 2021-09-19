@@ -31,13 +31,13 @@ export class ProjectsComponent implements OnInit {
     ) { }
 
   ngOnInit() {
-    this.retrieveGitHubProjects("mohitmanglani2906")
+    this.retrieveGitHubProjects("chetan238")
   }
 
-  retrieveGitHubProjects(username){
+  retrieveGitHubProjects(chetan238){
 
     // this.projectsList = GitHub[100]
-    this.githubapisService.retrieveGitHubProjects(username).subscribe(
+    this.githubapisService.retrieveGitHubProjects(chetan238).subscribe(
       response => {
         //console.log("githubData " + typeof(response) + " ")
         this.projectsList = response //JSON.stringify(response)
@@ -55,8 +55,7 @@ export class ProjectsComponent implements OnInit {
   getOutPutProjects(projectsList){
 
     //console.log(projectsList.length)
-    const notIncludeProject = ["Android-Samples","NPTEl-material-for-programming-data-structure-and-algoritham","OOPC-programmes-for-beginners",
-                                "scf-config-repository", "TeluskoLiveProject","Women_Security","Project","Code"]
+    const notIncludeProject = ["ideal-new-repo","first-repo","login"]
     for(var i=0 ;i< projectsList.length; i++){
       this.name = projectsList[i]["name"]
       this.description = projectsList[i]["description"]
@@ -66,18 +65,9 @@ export class ProjectsComponent implements OnInit {
           this.description = "Description Not Available!"
       }
 
-      // console.log(this.name)
-      // console.log(this.description)
-      // console.log(this.html_url)
-
-      //this.githubList.push(new GitHub(this.name, this.description, this.html_url))
-
       
-      // if (this.name != "Android-Samples" || this.name != "NPTEl-material-for-programming-data-structure-and-algoritham" ||
-      //     this.name != "OOPC-programmes-for-beginners" || this.name != "scf-config-repository" || this.name != "TeluskoLiveProject"
-      //     || this.name != "Women_Security")
 
-      if(!notIncludeProject.includes(this.name))
+     if(!notIncludeProject.includes(this.name))
       {
 
         this.description = projectsList[i]["description"]
@@ -88,7 +78,7 @@ export class ProjectsComponent implements OnInit {
         
         if (projectsList[i]["description"] == null){
           this.description = "Description Not Available,Will Update Soon!"
-        }
+     }
         
         this.githubList.push(new GitHub(this.name, this.description, this.html_url))
 
