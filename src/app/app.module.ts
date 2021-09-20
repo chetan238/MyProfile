@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SkillsComponent } from './skills/skills.component';
 import { IntroductionComponent } from './introduction/introduction.component';
 import { FooterComponent } from './footer/footer.component';
+import { title } from 'process';
 
 @NgModule({
   declarations: [
